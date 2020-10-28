@@ -1,0 +1,75 @@
+.container-profile-data {
+
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex > div {
+    margin-left: 24px;
+}
+
+.flex > div > h1 {
+    font-size: 26px;
+    line-height: 1.25;
+    color: var(--gray-dark);
+    font-weight: 600;
+}
+
+.flex > div > h2 {
+    font-size: 20px;
+    color: var(--username);
+    font-weight: 300;
+}
+
+.avatar {
+    width: 16%;
+    border-radius: 50%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.row > li {
+    display: flex;
+    align-items: center;
+}
+
+.row > li > span {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.row > li > * {
+    margin-right: 5px;
+}
+
+.row svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--icon);
+    flex-shrink: 0;
+}
+
+.column li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.column li + li {
+    margin-top: 10px;
+}
+
+.column span {
+    margin-left: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-wrap: nowrap;
+}
