@@ -14,11 +14,29 @@
 }
 
 .left-side {
-
+    padding: 0 var(--horizontal-padding);
 }
 
 .right-side {
+    padding: 0 var(--horizontal-padding);
+}
 
+.repos {
+    margin-top: var(--vertical-padding);
+}
+
+.repos h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.repos > div {
+    margin-top: 8px;
+
+    display: grid;
+    grid-gap: 16px;
+
+    grid-template-columns: 1fr;
 }
 
 @media(min-width: 768px) {
@@ -32,5 +50,10 @@
 
     .right-side {
         width: 75%;
+    }
+
+    .repos > div {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: minmax(min-content, max-content);
     }
 }

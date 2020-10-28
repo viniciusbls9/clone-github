@@ -1,6 +1,7 @@
 import React from 'react';
 
 import ProfileData from '../../components/ProfileData';
+import RepoCard from '../../components/RepoCard';
 
 import './styles.css';
 
@@ -23,7 +24,23 @@ const pages: React.FC = () => {
 				</div>
 
 				<div className="right-side">
+					<div className="repos">
+						<h2>Random repos</h2>
 
+						<div>
+							{[1, 2, 3, 4, 5, 6].map(n => (
+								<RepoCard
+									key={n}
+									username={'viniciusbls9'}
+									reponame={'whatsappclone'}
+									description={'whatsappclone'}
+									language={n % 3 === 0 ? 'Javascript' : 'Typescript'}
+									stars={8}
+									forks={4}
+								/>
+							))}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

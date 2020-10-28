@@ -1,0 +1,75 @@
+.container-repo-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+}
+
+.top-side > header {
+    display: flex;
+    align-items: center;
+}
+
+.top-side > header > a {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--link);
+    text-decoration: none;
+}
+
+.top-side > header > a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.top-side > p {
+    margin: 8px 0 16px;
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.1px;
+}
+
+.bot-side > ul {
+    display: flex;
+    align-items: center;
+}
+
+.bot-side > ul > li {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+.bot-side > ul > li > span {
+    margin-left: 5px;
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.bot-side .language {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.bot-side .other {
+    background: var(--other-language);
+}
+
+.bot-side .javascript {
+    background: var(--javascript);
+}
+
+.bot-side .typescript {
+    background: var(--typescript);
+}
+
+.bot-side > li > svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--icon);
+    flex-shrink: 0;
+}
