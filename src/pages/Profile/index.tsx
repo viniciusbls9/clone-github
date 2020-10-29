@@ -2,6 +2,7 @@ import React from 'react';
 
 import ProfileData from '../../components/ProfileData';
 import RepoCard from '../../components/RepoCard';
+import RandomCalendar from '../../components/RandomCalendar';
 
 import './styles.css';
 
@@ -41,6 +42,11 @@ const pages: React.FC = () => {
 							))}
 						</div>
 					</div>
+
+					<span className="calendar-heading">random calendar (do not represent actual data)</span>
+
+					<RandomCalendar />
+
 				</div>
 			</div>
 		</div>
