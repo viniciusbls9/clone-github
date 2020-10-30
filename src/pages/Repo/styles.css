@@ -1,0 +1,91 @@
+.container-repo {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.container-repo > p {
+    font-size: 16px;
+}
+
+.container-repo .breadcumb svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--icon);
+    flex-shrink: 0;
+}
+
+.breadcumb {
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.breadcumb a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+.breadcumb a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.breadcumb .username {
+    margin-left: 8px;
+}
+
+.breadcumb .reponame {
+    font-weight: 600;
+}
+
+.breadcumb span {
+    padding: 0 5px;
+}
+
+.stats {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.stats li {
+    display: flex;
+    align-items: center;
+    margin-right: 9px;
+}
+
+.stats li * {
+    margin-right: 7px;
+    color: var(--gray);
+}
+
+.stats svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--icon);
+    flex-shrink: 0;
+}
+
+.link-button {
+    margin-top: 24px;
+    background: var(--gray-dark);
+    padding: 12px 17px;
+    border-radius: 24px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.link-button span {
+    color: var(--primary);
+}
+
+.link-button svg {
+    fill: var(--primary);
+    margin-right: 10px;
+}
