@@ -1,4 +1,6 @@
 import React from 'react';
+import { RiBookMarkLine } from 'react-icons/ri';
+
 
 import ProfileData from '../../components/ProfileData';
 import RepoCard from '../../components/RepoCard';
@@ -7,8 +9,26 @@ import RandomCalendar from '../../components/RandomCalendar';
 import './styles.css';
 
 const pages: React.FC = () => {
+
+	const TabContent = () => (
+		<div className="content">
+			<RiBookMarkLine />
+			<span className="label">Repositories</span>
+			<span className="number">26</span>
+		</div>
+	)
+
 	return (
 		<div className="container-profile">
+
+			<div className="desktop">
+				<div className="wrapper">
+					<span className="offset"></span>
+					<TabContent />
+				</div>
+				<span className="line-desktop"></span>
+			</div>
+
 			<div className="main">
 				<div className="left-side">
 					<ProfileData
@@ -25,6 +45,10 @@ const pages: React.FC = () => {
 				</div>
 
 				<div className="right-side">
+					<div className="tab mobile">
+						<TabContent />
+						<span className="line"></span>
+					</div>
 					<div className="repos">
 						<h2>Random repos</h2>
 

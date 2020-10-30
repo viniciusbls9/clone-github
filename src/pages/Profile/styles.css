@@ -1,8 +1,15 @@
+.content svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
 .container-profile {
     --horizontal-padding: 16px;
     --vertical-padding: 24px;
 
     padding: var(--vertical-padding) var(--horizontal-padding);
+    overflow: hidden;
 }
 
 .main {
@@ -19,6 +26,52 @@
 
 .right-side {
     padding: 0 var(--horizontal-padding);
+}
+
+.tab {
+    background-color: var(--primary);
+}
+
+.tab .line {
+    display: flex;
+    width: 200vw;
+    border-bottom: 1px solid var(--border);
+    margin-left: -50vw;
+}
+
+.mobile {
+    margin-top: var(--vertical-padding);
+}
+
+.desktop {
+    display: none;
+}
+
+.mobile .content {
+    margin: 0 auto;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: min-content;
+
+    padding: 14px 16px;
+
+    border-bottom: 2px solid var(--orange);
+}
+
+.content .label {
+    font-size: 14px;
+    padding: 0 7px;
+    font-weight: 600;
+}
+
+.content .number {
+    font-size: 12px;
+    background: var(--ticker);
+    padding: 2px 6px;
+    border-radius: 24px;
 }
 
 .repos {
@@ -61,5 +114,24 @@
     .repos > div {
         grid-template-columns: 1fr 1fr;
         grid-auto-rows: minmax(min-content, max-content);
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: unset;
+    }
+
+    .desktop .wrapper {
+        display: flex;
+        margin: 0 auto;
+        max-width: 1280px;
+    }
+
+    .desktop .offset {
+        width: 14%;
+        margin-right: var(--horizontal-padding);
     }
 }
