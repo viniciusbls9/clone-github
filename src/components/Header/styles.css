@@ -24,6 +24,7 @@
     padding: 7px 12px;
     width: 100%;
     transition: width .2s ease-out, color .2s ease-out;
+    color: #fff;
 }
 
 .search-form input:focus {
