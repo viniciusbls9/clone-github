@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-
-
+import { ThemeName } from '../../styles/themes';
 
 import './styles.css';
 
-const Header: React.FC = () => {
+interface Props {
+    themeName: ThemeName;
+    setThemeName: (newName: ThemeName) => void;
+}
+
+const Header: React.FC<Props> = ({ themeName, setThemeName }) => {
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
 
@@ -16,9 +20,13 @@ const Header: React.FC = () => {
         navigate(`/${search.toLowerCase().trim()}`);
     }
 
+    function toggleTheme() {
+        setThemeName(themeName === 'light' ? 'dark' : 'light');
+    }
+
     return (
         <div className="container">
-            <FaGithub className="github-logo" />
+            <FaGithub className="github-logo" onClick={toggleTheme} />
 
             <form className="search-form" onSubmit={handleSubmit}>
                 <input
